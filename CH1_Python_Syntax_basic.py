@@ -70,3 +70,68 @@ for i in range(10):
     if i == 7:
         break     # Exit loop
     print(i)
+
+# ========== ADDITIONAL TOPICS ==========
+
+# Comments
+# This is a single-line comment
+"""
+This is a multi-line comment
+used for documentation.
+"""
+
+# Variable Scope
+glob_x = 10  # Global variable
+
+def scope_demo():
+    loc_x = 5  # Local variable
+    print(f"Local x: {loc_x}")
+
+scope_demo()
+print(f"Global x: {glob_x}")
+
+# Constants
+PI = 3.14159
+GRAVITY = 9.8
+print(f"PI: {PI}, GRAVITY: {GRAVITY}")
+
+# Dynamic Typing
+dyn_var = 10  # Integer
+print(f"Type: {type(dyn_var)}")
+dyn_var = "Hello"  # Now a string
+print(f"Type: {type(dyn_var)}")
+
+# Type Conversion
+str_num = "123"
+int_num = int(str_num)  # Convert string to integer
+float_num = float(int_num)  # Convert integer to float
+print(f"String: {str_num}, Int: {int_num}, Float: {float_num}")
+
+# Augmented Assignment Operators
+aug_x = 5
+aug_x += 3  # aug_x = aug_x + 3
+print(f"After += 3: {aug_x}")
+
+# Unpacking Variables
+a, b, c = 1, 2, 3
+print(f"Unpacked: a={a}, b={b}, c={c}")
+
+# Swapping Variables
+swap_x, swap_y = 10, 20
+swap_x, swap_y = swap_y, swap_x
+print(f"After swap: x={swap_x}, y={swap_y}")
+
+# Global and Nonlocal Keywords
+nonlocal_x = 10
+
+def outer():
+    nonlocal_x = 5
+
+    def inner():
+        nonlocal nonlocal_x
+        nonlocal_x = 15
+
+    inner()
+    print(f"After inner(): {nonlocal_x}")
+
+outer()
