@@ -1,4 +1,4 @@
-# Python Syntax Basics - Variables and Loops
+# Python Syntax Basics - Variables and ControlFlow Functions, Loops
 
 # ========== VARIABLES ==========
 # Variable assignment
@@ -26,6 +26,54 @@ print(message)
 # String methods
 print(name.lower())
 print(name.upper())
+# ========== CONTROL FLOW (IF/ELIF/ELSE) ==========
+# Conditional statements are used to execute code based on a condition.
+
+age = 18
+
+if age < 18:
+    print("You are a minor.")
+elif age == 18:
+    print("You just became an adult.")
+else:
+    print("You are an adult.")
+
+# Conditions can be combined with logical operators (and, or, not)
+is_student = True
+if age > 18 and is_student:
+    print("You are a student and an adult.")
+# The 'match...case' statement (Python 3.10+) is Python's version of a switch.
+# It is used for structural pattern matching.
+#
+# Why no 'break'?:
+#   Unlike in C++ or Java, 'match' does not "fall through". It automatically
+#   exits after the first matching 'case' block is executed. 'break' is not needed.
+#
+# When to use 'match' vs 'if/elif/else':
+#   - Use 'match' when you have several distinct cases that depend on the
+#     structure or value of a variable. It can be much cleaner than a long
+#     'if/elif/else' chain for complex conditions.
+#   - For simple boolean checks (e.g., age > 18), a standard 'if' statement
+#     is often more readable.
+#
+# Performance:
+#   For most common scenarios, the performance difference between 'match' and
+#   'if/elif/else' is negligible. Prioritize readability and maintainability.
+#   Choose the tool that makes your code's intent clearest.
+age_category = ""
+match age:
+    case age if age < 18:
+        age_category = "Minor"
+    case age if 18 <= age < 65:
+        age_category = "Adult"
+    case age if age >= 65:
+        age_category = "Senior"
+    case _: # The underscore `_` is a wildcard, acting as a default case.
+        age_category = "Invalid age"
+
+print(f"Based on the age {age}, the person is an {age_category}.")
+
+
 
 # ========== FOR LOOPS ==========
 # Loop through range

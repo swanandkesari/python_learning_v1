@@ -72,6 +72,36 @@
 
 ---
 
+### Control Flow (If/Else):
+#### Do's:
+- Use `if`/`elif`/`else` for conditional execution.
+  Example:
+  ```python
+  age = 20
+  if age < 18:
+      print("Minor")
+  elif age < 65:
+      print("Adult")
+  else:
+      print("Senior")
+  ```
+- Keep conditional logic simple and readable.
+- Use `and`, `or`, `not` for combining conditions.
+  Example:
+  ```python
+  x = 10
+  y = 5
+  if x > 0 and y > 0:
+      print("Both positive")
+  ```
+
+#### Don'ts:
+- Avoid deeply nested `if` statements; refactor with functions or logical operators.
+- Don't use `if True:` or `if False:`; these are redundant.
+- Don't compare boolean values to `True` or `False` directly (e.g., `if is_active == True:` should be `if is_active:`).
+
+---
+
 ### Loops:
 #### Do's:
 - Use `enumerate()` when you need both the index and the value in a loop.
@@ -174,6 +204,33 @@
 
 #### Don'ts:
 - Avoid deeply nested loops; refactor into functions if necessary.
+
+---
+
+### Match-Case (Structural Pattern Matching):
+#### Do's:
+- Use `match...case` (Python 3.10+) as a modern alternative to complex `if/elif/else` chains.
+- Use it to match against the value or structure of a variable.
+- Use `if` guards within a `case` for more complex conditions (e.g., ranges).
+  Example:
+  ```python
+  status = 404
+  match status:
+      case 400:
+          print("Bad request")
+      case 404:
+          print("Not found")
+      case status if status >= 500:
+          print("Server error")
+      case _: # Default case
+          print("Something else")
+  ```
+- Use the wildcard `_` for the default case when no other cases match.
+
+#### Don'ts:
+- Do not add `break` at the end of a `case`. `match` does not fall through and exits automatically after the first match.
+- Don't prioritize it over `if/elif/else` for simple boolean checks where `if` is more readable.
+- Don't worry about performance for most cases; choose based on readability and maintainability.
 
 ---
 
