@@ -1,8 +1,8 @@
-1)	Write a Javascript program to reverse any number:
+1)	Write a Python program to reverse any number:
     Input : 1234
     Output: 4321 
 
-2)	Write a Javascript program to find the number of ‘E’ in the string SELENIUM?
+2)	Write a Python program to find the number of ‘E’ in the string SELENIUM?
     Input : SELENIUM 
     Output: No. of Es in the string supplied are 2
     
@@ -22,11 +22,11 @@
 
 7)	Write  a program to find a given number is even or odd without using modulus operator?
 
-8)  Write a Javascript program to swap two numbers without creating a temporary variable.
+8)  Write a Python program to swap two numbers without creating a temporary variable.
 
 9) Fibonacci series
 
-Write a Javascript program to print fibonacci series without using recursion and using recursion.
+Write a Python program to print fibonacci series without using recursion and using recursion.
 
 Input: 10
 
@@ -34,7 +34,7 @@ Output: 0 1 1 2 3 5 8 13 21 34
 
 10) Prime number
 
-Write a Javascript program to check prime number.
+Write a Python program to check prime number.
 
 Input: 44
 
@@ -46,7 +46,7 @@ Output: prime number
 
 11) Palindrome number
 
-Write a Javascript program to check palindrome number.
+Write a Python program to check palindrome number.
 
 Input: 329
 
@@ -58,7 +58,7 @@ Output: palindrome number
 
 12) Factorial number
 
-Write a Javascript program to print factorial of a number.
+Write a Python program to print factorial of a number.
 
 Input: 5
 
@@ -70,7 +70,7 @@ Output: 720
 
 13) Armstrong number
 
-Write a Javascript program to check Armstrong number.
+Write a Python program to check Armstrong number.
 
 Input: 153
 
@@ -82,7 +82,7 @@ Output: not Armstrong number
 
 14) Bubble Sort
 
-Write a Javascript program to sort an array elements using bubble sort algorithm.
+Write a Python program to sort an array elements using bubble sort algorithm.
 
 Input : 50 20 6 103 67 2 9
 
@@ -90,7 +90,7 @@ Output: 2 6 9 20 50 67 103
 
 15) Selection Sort
 
-Write a Javascript program to sort an array elements using selection sort algorithm.
+Write a Python program to sort an array elements using selection sort algorithm.
 
 Input: 16,37,4,45,9,78,92
 
@@ -98,7 +98,7 @@ Output: 4,9,16,37,45,78,92
 
 16) Insertion Sort
 
-Write a Javascript program to sort an array elements using insertion sort algorithm.
+Write a Python program to sort an array elements using insertion sort algorithm.
 
 Input: 15 6 30 2 50 28
 
